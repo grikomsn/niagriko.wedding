@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/inpyjamas/schemas/main/render.com.json
+# https://render.com/docs/yaml-spec
+
+services:
+  - name: photo-stream-wedding
+    type: web
+    env: static
+    buildCommand: bundle exec jekyll build
+    domains:
+      - niagriko.wedding
+    staticPublishPath: ./_site
