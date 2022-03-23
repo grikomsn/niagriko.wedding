@@ -5,7 +5,7 @@ services:
   - name: photo-stream-wedding
     type: web
     env: static
-    buildCommand: bundle exec jekyll build
+    buildCommand: ./build-static.sh
     domains:
       - niagriko.wedding
     staticPublishPath: ./_site
