@@ -3,18 +3,18 @@
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<generator uri="https://github.com/maxvoltar/photo-stream">Photo Stream by @maxvoltar</generator>
+	<generator uri="https://github.com/waschinski/photo-stream">Photo Stream</generator>
 	<link href="{{ site.env.URL }}feed.xml" rel="self" type="application/atom+xml" />
 	<link href="{{ site.env.URL }}" rel="alternate" type="text/html"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<id>{{ site.time | date_to_xmlschema }}</id>
-	<title type="html">{{ site.env.TITLE}}</title>
-	<subtitle>{{ site.env.DESCRIPTION }}</subtitle>
+	<title type="html"><![CDATA[{{ site.env.TITLE}}]]></title>
+	<subtitle><![CDATA[{{ site.env.DESCRIPTION }}]]></subtitle>
 
 	{% if site.env.AUTHOR_NAME or site.env.AUTHOR_EMAIL or site.env.AUTHOR_WEBSITE %}
 		<author>
 			{% if site.env.AUTHOR_NAME %}
-				<name>{{ site.env.AUTHOR_NAME }}</name>
+				<name><![CDATA[{{ site.env.AUTHOR_NAME }}]]></name>
 			{% endif %}
 			{% if site.env.AUTHOR_EMAIL %}
 				<email>{{ site.env.AUTHOR_EMAIL }}</email>
@@ -40,7 +40,7 @@
 			{% if site.env.AUTHOR_NAME %}
 				<author>
 					{% if site.env.AUTHOR_NAME %}
-						<name>{{ site.env.AUTHOR_NAME }}</name>
+						<name><![CDATA[{{ site.env.AUTHOR_NAME }}]]></name>
 					{% endif %}
 					{% if site.env.AUTHOR_EMAIL %}
 						<email>{{ site.env.AUTHOR_EMAIL }}</email>
